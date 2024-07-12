@@ -37,7 +37,5 @@ namespace Flarial.Launcher.Pages
             => SettingsPageTransition.SettingsNavigateAnimation(0, PageBorder, PageStackPanel);
         private void Navigate_Version(object sender, RoutedEventArgs e)
             => SettingsPageTransition.SettingsNavigateAnimation(-500, PageBorder, PageStackPanel);
-        private void Navigate_Account(object sender, RoutedEventArgs e)
-            => SettingsPageTransition.SettingsNavigateAnimation(-1000, PageBorder, PageStackPanel);
     }
 }

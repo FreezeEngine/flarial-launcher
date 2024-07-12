@@ -33,8 +33,6 @@
                     <TextBlock Grid.Column="1" Margin="10,0,0,0" Text="Settings" VerticalAlignment="Center" FontSize="22" Foreground="White" FontFamily="pack://application:,,,/Assets/#Space Grotesk"/>
                 </Grid>
                 <RadioButton Grid.Row="1" Checked="Navigate_General" Name="GeneralPageButton" Content="General" Margin="30,0,30,25"/>
-                <RadioButton Grid.Row="2" Checked="Navigate_Version" Content="Version" Margin="30,0,30,25"/>
-                <RadioButton Grid.Row="3" Checked="Navigate_Account" Content="Account" Margin="30,0,30,25"/>
                 <Button Grid.Row="4" Cursor="Hand" Click="ButtonBase_OnClick" Content="Return" VerticalAlignment="Bottom" Margin="30,0,30,32.5">
                     <Button.Template>
                         <ControlTemplate>
@@ -109,9 +107,6 @@
                 </Border>
                 <Border Background="#201A1B" CornerRadius="25" Margin="0,0,0,30">
                     <Frame Height="470" Width="555" Source="/Pages/SettingsVersionPage.xaml"/>
-                </Border>
-                <Border Background="#201A1B" CornerRadius="25">
-                    <Frame Height="470" Width="555" Source="/Pages/SettingsAccountPage.xaml"/>
                 </Border>
             </StackPanel>
         </Border>

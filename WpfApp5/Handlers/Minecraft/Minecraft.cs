@@ -89,11 +89,24 @@ namespace Flarial.Launcher
         {
             var v = PackageVersion;
 
-          double buildVersion =  (double)v.Build;
-           var Ok = (int)buildVersion.RoundToSignificantDigits(2);
-          ;
-            return new Version(v.Major, v.Minor,
-               int.Parse(Ok.ToString().Substring(0, 2)));
+            // Get the build number as a string
+            string buildString = v.Build.ToString();
+
+            // Take the first two digits of the build number
+            string truncatedBuild = buildString.Substring(0, Math.Min(2, buildString.Length));
+
+            // Construct the version string with Major, Minor, and truncated Build
+            string versionString = $"{v.Major}.{v.Minor}.{truncatedBuild}";
+
+            // Parse the version string to a Version object
+            Version parsedVersion;
+            if (!Version.TryParse(versionString, out parsedVersion))
+            {
+                // Handle the case where parsing fails
+                throw new InvalidOperationException($"Failed to parse version string: {versionString}");
+            }
+
+            return parsedVersion;
         }
         
         public static async Task WaitForModules()

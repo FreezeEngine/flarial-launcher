@@ -31,7 +31,6 @@ namespace Flarial.Launcher.Pages
             saveButton = SaveButton;
             tb1.IsChecked = Config.UseCustomDLL;
             tb2.IsChecked = Config.UseBetaDLL;
-            tb3.IsChecked = Config.AutoLogin;
             tb4.IsChecked = Config.CloseToTray;
             DLLTextBox.Text = Config.CustomDLLPath;
         }

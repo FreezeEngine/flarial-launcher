@@ -2,6 +2,11 @@
 
   <PropertyGroup Label="Globals">
     <WebView2UseWinRT>True</WebView2UseWinRT>
+    <Configurations>Debug;Release;Release2</Configurations>
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <ErrorOnDuplicatePublishOutputFiles>false</ErrorOnDuplicatePublishOutputFiles>
   </PropertyGroup>
 
   <PropertyGroup>
@@ -49,6 +54,10 @@
     <EmbeddedResource Remove="Handlers\UI\**" />
     <None Remove="Handlers\UI\**" />
     <Page Remove="Handlers\UI\**" />
+    <Page Remove="Pages\SettingsAccountPage.xaml" />
+    <Compile Remove="Pages\SettingsAccountPage.xaml.cs" />
+    <Page Remove="Window1.xaml" />
+    <Compile Remove="Window1.xaml.cs" />
   </ItemGroup>
 
  <ItemGroup>
@@ -63,7 +72,7 @@
     <PackageReference Include="DiscordRichPresence" Version="1.2.1.24" />
     <PackageReference Include="FluentWPF" Version="0.10.2" />
     <PackageReference Include="MathConverter" Version="2.2.1" />
-    <PackageReference Include="Microsoft.Web.WebView2" Version="1.0.2210.55" />
+    
     <PackageReference Include="Microsoft.Windows.CsWinRT" Version="2.0.4" />
     <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
     <PackageReference Include="RestSharp" Version="110.2.0" />
